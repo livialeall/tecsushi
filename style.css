@@ -1,0 +1,237 @@
+/* Importando uma fonte elegante similar à da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Fundo sutil para simular o rastro de pincel da imagem */
+    background: radial-gradient(circle at top right, #f9f9f9, #ffffff);
+}
+
+/* --- Navegação --- */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    list-style: none;
+    gap: 40px;
+    background-color:#C07161;
+}
+
+nav li {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #0d0b0b;
+}
+
+nav li:hover {
+    color: #413533;
+}
+
+/* --- Hero Section (Main) --- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Texto principal grande e estilizado */
+    position: relative;
+}
+/* --- Estilização dos Parágrafos --- */
+section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 800px; /* Limita a largura para facilitar a leitura */
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Estilo para termos em destaque (strong) */
+section p strong {
+    color: #e72626; /* Vermelho temático da imagem */
+    font-weight: 600;
+}
+
+/* Estilização para a lista de diferenciais (caso use dentro da section) */
+section ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+section li {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Um pequeno detalhe tecnológico antes de cada item da lista */
+section li::before {
+    content: "01"; /* Simulando código/numeração binária */
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #e72626;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+/* Estilização da citação (quote) */
+section blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    border-left: 4px solid #0d1117;
+    padding-left: 20px;
+    margin: 40px 0;
+    color: #222;
+}
+
+h1 {
+    
+    font-size: 3rem;
+    color: #e72626;
+}
+main span {
+    text-decoration: underline;
+ }
+
+.main_div {
+     display: flex;
+     align-items:center;
+}
+
+/* Estilização do botão "Peça já" */
+main button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background-color: #0d1117;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    /* Efeito de pincelada/irregular no botão como o "Book a reservation" */
+    clip-path: polygon(2% 0%, 100% 2%, 98% 95%, 0% 100%);
+    transition: transform 0.3s;
+}
+
+main button:hover {
+    transform: scale(1.05);
+    background-color: rgba(231, 38, 38, 0.8);
+}
+
+/* --- Seções de Conteúdo --- */
+section {
+    margin-top: 80px;
+    width: 100%;
+}
+
+section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Detalhe decorativo simulando a faixa vermelha da imagem */
+section h3::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 20%;
+    width: 110%;
+    height: 60%;
+    background-color: rgba(231, 38, 38, 0.8);
+    z-index: -1;
+    clip-path: polygon(1% 15%, 99% 0%, 95% 85%, 2% 100%);
+}
+
+/* Container do Grid */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Card Individual */
+.card-sushi {
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.card-sushi:hover {
+    border-color: #e72626; /* Vermelho tech */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-sushi h3 {
+    font-family: monospace; /* Fonte de código para os nomes */
+    color: #0d1117;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-sushi span {
+    display: block;
+    font-size: 0.85rem;
+    color: #e72626;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.card-sushi p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 60px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: 1px solid #eee;
+    margin-top: 100px;
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+    main {
+        font-size: 2.5rem;
+        text-align: center;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
